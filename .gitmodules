@@ -1,6 +1,6 @@
 [submodule "Silverpeas-Core"]
 	path = Silverpeas-Core
-	url = https://github.com/SilverTeamWork/Silverpeas-Core
+	url = https://github.com/remipassmoilesel/Silverpeas-Core
 [submodule "Silverpeas-Components"]
 	path = Silverpeas-Components
 	url = https://github.com/SilverTeamWork/Silverpeas-Components

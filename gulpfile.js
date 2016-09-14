@@ -86,5 +86,3 @@ gulp.task('mirror-utils-locally', shell.task([
   '&& rsync -avz Silverpeas-Core/core-war/src/main/webapp/util/ /opt/silverpeas-6.0-SNAPSHOT-wildfly10/bin/build/dist/util '
 
 ]));
-
-//
