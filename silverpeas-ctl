@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Author: Rémi Passmoilesel <remi.passmoilesel@gmail.com>
+
+# Get function from functions library
+# . /etc/init.d/functions
+
+. /opt/silverpeas-6.0-SNAPSHOT-wildfly10/export-vars
+
+do_start() {
+
+  echo "Starting Silverpeas ..."
+
+  "$SILVERPEAS_HOME"/bin/silverpeas start
+
+}
+
+do_stop() {
+
+  echo "Stopping Silverpeas ..."
+
+  "$SILVERPEAS_HOME"/bin/silverpeas stop
+
+}
+
+case "$1" in
+  start)
+    do_start
+    ;;
+  stop)
+    do_stop
+    ;;
+  restart|reload|condrestart)
+    do_stop
+    do_start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|reload|status}"
+    exit 1
+esac
+
+exit 0

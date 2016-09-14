@@ -1,0 +1,10 @@
+[Unit]
+Description=Silverpeas
+
+[Service]
+ExecStart=/opt/silverpeas-6.0-SNAPSHOT-wildfly10/silverpeas-ctl start
+ExecStop=/opt/silverpeas-6.0-SNAPSHOT-wildfly10/silverpeas-ctl stop
+ExecReload=/opt/silverpeas-6.0-SNAPSHOT-wildfly10/silverpeas-ctl reload
+
+[Install]
+WantedBy=multi-user.target
